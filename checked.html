@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>个人中心</title>
+    <script type="text/javascript" src="js/jquery-1.8.3.min.js" ></script>
+
+    <style>
+    
+    </style>
+</head>
+<body>
+
+   
+    <div>
+    	<input type="checkbox" class="getcheckbox" name="sex" checked="checked" />
+    	<input type="checkbox" class="getcheckbox" name="sex" />
+    	<input type="checkbox" class="getcheckbox" name="sex" />
+    	<input type="checkbox" class="getcheckbox" name="sex"  />
+    </div>
+  
+ <script type="text/javascript" src="js/normal-js.js" ></script>
+ <script>
+ 	$(function(){
+ 		$(".getcheckbox").each(function(){
+ 	        var isAttr=$(this).attr("checked");
+ 	        if(isAttr==='checked'){
+ 	        	$(this).attr("value",1);
+ 	        	
+ 	        }else{
+ 	        	$(this).attr("value",0);
+ 	        }
+ 		});
+ 		$(".getcheckbox").on("click",function(e){
+ 			
+            var isAttr=$(this).prop("checked");			
+ 			if(isAttr==false){
+ 				$(this).removeAttr("checked");
+ 				$(this).attr("value",0);
+ 			}else{
+ 				$(this).attr("checked","checked");
+ 				$(this).attr("value",1);
+ 			}
+ 			
+ 		})
+ 	})
+ </script>
+ 
+</body>
+</html>

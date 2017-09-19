@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>中奖统计</title>
+    <link  rel="stylesheet" href="../../css/reset.css">
+    <link  rel="stylesheet" href="../../css/siteStyle.css">
+    <script type="text/javascript" src="../../js/jquery-1.8.3.min.js" ></script>
+    <style>
+    	.pic-list{ width: 90px; margin-bottom: 0;padding: 0;}
+        .pic-list .pic-cell-mask{padding: 0;margin-top: -20px;height: 20px;}
+        .pic-list .pic-cell-mask label{text-align: center; display: inline-block; width: 100%; overflow: hidden;}
+        .p-split{margin: 12px auto;}
+        .tongbu{width:20px !important;height: 20px !important; margin-right: 0 !important;}
+        .address-body{position: relative;}
+        .flag-status {position: absolute; top:30px; right: 30px; width: 68px;}
+        
+    	
+    	#deleteMerday{padding: 10px;}
+    	#deleteMerday .btn{padding-top: 4px;padding-bottom: 4px; font-size: 12px;}
+    	.margin-left-5{margin-left: 5px;}
+    	.tab-border #controlTab a{height:36px; padding:4px 0; text-align: center;}
+    	.tab-border #controlTab a:nth-child(3){border-right: none;}
+    	
+    	.message-sentence{margin-top: 15px;}
+    	.search-img{width: 20px;padding: 8px 0;}
+    	.min-btn{min-width: 60px;}
+    	.bottom-bar-tab .bottom-tab-item {color: #fff;}
+    	
+    	.mall-input{height: 36px;}
+        .mall-input>div{position: relative;}
+        .mall-input .input{ width: 100%; border: 1px solid #dcdcdc; padding: 4px 15px 4px 30px;height: 36px; }
+        .mall-input .mall-search-icon{ position: absolute; width: 20px; top: 8px; left: 10px; }
+        .cancle-tab{padding: 7px 0;display: inline-block;}
+        
+        .btn-tab {height: 57px;}
+        #deleteMerday,#bWorning{height: 120px;}
+        
+        #configDiv{
+        	display: none;
+            position: absolute; 
+            width: 80%; 
+            max-width:80%;
+            height:100%;
+
+            z-index:1003; 
+            overflow: auto;
+            overflow: hidden;
+            height: 140px;
+        }
+        .tab-item  p{font-size: 11px !important;}
+    </style>
+</head>
+<body>
+<div id="" class="tab-border head-height">
+	
+    <!-- bg-bar start-->
+    <div class="squer-bottom-bar squer-bottom-bar-tab">
+        <img src="../../img/bar_bg.png"  />
+    </div>
+    <!-- bg-bar end-->
+	
+    <!-- nav start-->
+    <nav class="nav">
+        <a href="javascript:history.go(-1)" class="nav-left" ><img src="../../img/back_icon.png" alt="back_icon" /></a>
+        <h1 class="text-center">中奖统计</h1>
+        <a href="#" class="nav-right upload-icon" style="color: #FFFFFF;font-size: 22px;top:4px;">&bull;&bull;&bull;</a>
+    </nav>
+    <!-- nav end-->
+   
+    <div class="row btn-tab margin-bt-10" >
+    	<div class="row tab-bar">
+    			<h1 class="col-sm-11">
+    		<div id="controlTab">
+    			<a href="#item1" class="tab-item tab-item-active col-sm-3">中奖人数<p>(122人)</p></a>
+    			<a href="#item2" class="tab-item col-sm-3">领奖人数<p >(122人)</p></a>
+    			<a href="#item3" class="tab-item col-sm-3">未领奖人数<p >(122人)</p></a>
+    			<a href="#item4" class="tab-item col-sm-3">抽奖人数<p >(122人)</p></a>
+    		</div>
+    	</h1>
+    	<div class="col-sm-1 text-right">
+    		<img src="../../img/activity_search_icon.png" class="search-img exchange-status"/>
+    	</div>	
+    	</div>
+    
+    	
+    	 <!-- row start -->
+        <div class="row mall-input" style="display: none;">
+    	<div class="col-sm-10">
+    		 <img src="../../img/activity_search_icon.png" alt="搜索" class="mall-search-icon" />
+     		<input type="text" placeholder="输入会员手机号/卡号/姓名" class="input" />
+    	</div>
+    	<div class="col-sm-2 text-right">
+    		<span class="cancle-tab width-100 exchange-status">取消</span>
+    	</div> 
+    
+    </div>
+    <!-- row end -->
+    </div>
+
+   
+    
+    <!-- form start-->
+    <form action="#" name="" id="" >
+    <div style="padding-bottom: 20px;">
+      <div id="item1" class="tab-content" style="">
+      	<div class="row" style="margin-bottom: 10px;">
+          <ul class="media-list">
+       	<li class="media-view-cell">
+       	  <a href="javascript:void(0)" class="cl row">
+       		<div class="col-sm-3">
+       			<div class="media-message apply">
+       				<img src="../../img/media_1.jpg" class="media_list_head show-orient" style="width: 60px;height: 60px;" />
+       			</div>
+       		   
+       		</div>
+       		<div class="media-body col-sm-9 text-warning">
+       			<div class="row media-body-title text-default">
+       				<span class="person-name">刘mimi</span>&nbsp;186541582203
+       				<span class="pull-right gift-name">苹果6s手机</span>
+       			</div>
+       			<p class="row message-sentence small">
+       				<span class="pull-left">2016-12-30&nbsp;14:20</span>
+       				<button class="btn btn-small btn-primary btn-smaller pull-right min-btn fafang" data-is="4">发放</button>
+       			</p>
+       		</div>
+       	  </a>
+       	</li>
+       	
+       	<li class="media-view-cell">
+       	  <a href="javascript:void(0)" class="cl row">
+       		<div class="col-sm-3">
+       			<div class="media-message apply">
+       				<img src="../../img/media_1.jpg" class="media_list_head show-orient" style="width: 60px;height: 60px;" />
+       			</div>
+       		    
+       		</div>
+       		<div class="media-body col-sm-9 text-warning">
+       			<div class="row media-body-title text-default">
+       				<span class="person-name">陈比比</span>&nbsp;186541582203
+       				<span class="pull-right gift-name">苹果6s手机</span>
+       			</div>
+       			<p class="row message-sentence small" >
+       				<span class="pull-left">2016-11-30&nbsp;14:20</span>
+       				<button class="btn btn-small btn-primary btn-smaller pull-right min-btn fafang" data-is="1">发放</button>
+       			</p>
+       		</div>
+       	  </a>
+       	</li>
+       	
+       	<li class="media-view-cell">
+       	  <a href="javascript:void(0)" class="cl row">
+       		<div class="col-sm-3">
+       			<div class="media-message apply">
+       				<img src="../../img/media_1.jpg" class="media_list_head show-orient" style="width: 60px;height: 60px;" />
+       			</div>
+       		    
+       		</div>
+       		<div class="media-body col-sm-9 text-warning">
+       			<div class="row media-body-title text-default">
+       				<span class="person-name">陈比比</span>&nbsp;186541582203
+       				<span class="pull-right gift-name">苹果6s手机</span>
+       			</div>
+       			<p class="row message-sentence small" >
+       				<span class="pull-left">2016-11-30&nbsp;14:20</span>
+       				<button class="btn btn-small btn-primary btn-smaller pull-right min-btn fafang" data-is="2">发放</button>
+       			</p>
+       		</div>
+       	  </a>
+       	</li>
+       	
+       	<li class="media-view-cell">
+       	  <a href="javascript:void(0)" class="cl row">
+       		<div class="col-sm-3">
+       			<div class="media-message apply">
+       				<img src="../../img/media_1.jpg" class="media_list_head show-orient" style="width: 60px;height: 60px;"/>
+       			</div>
+       		</div>
+       		<div class="media-body col-sm-9 text-warning">
+       			<div class="row media-body-title text-default">
+       				<span class="person-name">陈比比</span>&nbsp;186541582203
+       				<span class="pull-right gift-name">苹果6s手机</span>
+       			</div>
+       			<p class="row message-sentence small">
+       				<span class="pull-left">2016-11-30&nbsp;14:20</span>
+       				<button class="btn btn-small btn-smaller pull-right min-btn btn-gray" >已领取</button>
+       			</p>
+       			
+       		</div>
+       	  </a>
+       	</li>
+       	
+       	<li class="media-view-cell">
+       	  <a href="javascript:void(0)" class="cl row">
+       		<div class="col-sm-3">
+       			<div class="media-message apply">
+       				<img src="../../img/media_1.jpg" class="media_list_head show-orient" style="width: 60px;height: 60px;"/>
+       			</div>
+       		</div>
+       		<div class="media-body col-sm-9 text-warning">
+       			<div class="row media-body-title text-default">
+       				<span class="person-name">陆斯基</span>&nbsp;186541582203
+       				<span class="pull-right">未中奖</span>
+       			</div>
+       			<p class="row message-sentence small">
+       				<span class="pull-left text-warning">2016-11-30&nbsp;14:20</span>
+       			</p>
+       			
+       		</div>
+       	  </a>
+       	</li>
+     
+       </ul>
+       </div>
+    	<p class="text-center smaller text-warning">没有更多记录</p>
+      </div>
+      
+      
+      <div id="item2" class="tab-content">
+         
+    	<p class="text-center smaller text-warning">没有更多记录</p>
+       </div>
+       
+       <div id="item3" class="tab-content" style="">
+       
+       	
+      	  <div class="row no-data text-center">
+    	     <div class="row no-data-icon"><img src="../../img/no_data_icon.png" alt="没有券" /></div>
+    	     <p class="h5 text-warning">还没有未领奖人数的记录</p>
+          </div>
+      </div>
+     
+       
+       <!-- box end-->
+       
+      </div>
+    
+    </form>
+    <!-- form end-->
+</div>
+<div class="bottom-bar bottom-bar-tab">
+	    <a class="bottom-tab-item join-in btn-primary" href="javascript:void(0)" datasrc="../shoppingmall/shopping-mall.html" data-src="">
+				确认导出
+		</a>
+</div>
+<div class="bg-bottom-bar bg-bottom-bar-tab" style="background:url(../../img/dotted_bg.jpg) repeat-x;">
+</div>
+
+<div id="mask" class="cl"></div>
+<!--  -->
+<div id="bWorning" class="cl">
+	<p class="text-center"><span class="worning-content"></span></p>
+    <div class="row text-center" style="margin-top: 20px;">
+    	 <button href="#" class="btn btn-primary btn-smaller dialog-btn deletebtn" style="width:60px !important;">确定</button>
+    </div>
+</div>
+
+<div id="deleteMerday" class="cl">
+    <h4 class="row text-center small">是否确认为<span class="is-person-name"></span>发放<span class="is-gift-name"></span></h4>
+    <div class="row text-center" style="margin-top: 20px;">
+    	 <a href="#" class="btn btn-primary btn-smaller pull-left deletebtn" style="width:60px;">确定</a>
+         <a href="#" class="btn btn-smaller pull-right canclebtn" style="width:60px;">取消</a>
+    </div>
+</div>
+<!-- 验证 -->
+<div id="configDiv" class="cl row row-padding">
+	<div style="padding-bottom: 35px;" class="row">
+    	   <div class="col-sm-3 text-right">
+    	   	  <label class="label-code small text-white">券码:</label>
+    	   </div>
+    	   <div class="col-sm-9">
+    	      <input type="text" class="btn-block input-code"/>
+    	   </div>
+	    </div>
+	    <!-- bottom-bar start-->
+        <div class="text-center">	
+		    <input type="submit" class="btn btn-primary btn-block btn-config" value="验证" />
+	    </div>
+	    <!-- bottom-bar end-->
+</div>
+
+ <script type="text/javascript" src="../../js/normal-js.js" ></script>
+ <script type="text/javascript" src="../../js/TileHeadPic.js" ></script>
+ <script>
+ 	$(function(){
+ 		$('.apply img').jqthumb({
+		    width: 60,
+		    height: 60,
+		    zoom:2,
+		    after: function(imgObj){
+			   imgObj.css('opacity', 0).animate({opacity: 1},1000);
+		    }
+
+	    });
+	    $(".exchange-status").on("click",function(e){
+	    	e.preventDefault();
+	    	
+	    	var $par,$obj;
+	    	$(".tab-bar,.mall-input").css({"display":"inline-block"});
+	    	
+	    	if($(this).hasClass("search-img")){
+	    		$par=$(this).closest(".tab-bar");
+	    	    $obj=$(".mall-input");
+	    	}else{
+	    		$par=$(".mall-input");
+	    	    $obj=$(this).closest(".tab-bar");
+	    	}
+	    	$obj.css({"display":"inline-block"});
+	    	$par.css({"display":"none"});
+	    	
+	    });
+ 		
+ 		
+        $("#controlTab").tab({
+			tabItem:".tab-item",
+			tabContent:".tab-content"
+		});
+		//收藏
+		$(".click-like").each(function(){
+			$(this).on("click",function(e){
+				e.preventDefault();
+				var $dataSrc=$(this).attr("datasrc");
+				$(this).attr({"datasrc":$(this).attr("src"),"src":$dataSrc});
+			});
+		});
+		
+		
+		var screenHeight=document.body.scrollHeight;//屏幕的高度
+		var actHeight=screenHeight-$(".nav").outerHeight()-$(".spt-search").outerHeight();
+		$("#minmask").css({"height":actHeight+'px',"top":$(".nav").outerHeight()-$(".spt-search").outerHeight()+'px'});
+		
+		$(".slide-floor").getSlide({
+			slideFloor:".slide-floor",//外包
+			slideFloorView:".slide-floor-view",//楼层业态外包
+			slideFloorList:".slide-floor-list",//对应内容父级
+			slideCell:".slide-cell",//楼层业态分别对应
+			mask:"#minmask"
+		});
+		
+		
+		$("#deleteMerday").on("click",function(e){
+			e.stopPropagation();//防止触发冒泡
+	    });
+	  
+	   $(".fafang").on("click",function(e){
+			e.preventDefault();
+			var isTrue=parseInt($(this).attr("data-is"));//对应的编码
+			var inVal;
+			var $giftName=$(this).closest(".media-body").find(".gift-name").text();
+			var $perName=$(this).closest(".media-body").find(".person-name").text();
+			$("#configDiv").find(".input-code").val("");
+			
+			$("#configDiv").modal({
+				    maskName:"#mask",
+				    targetObject:"#configDiv",
+				    maskShadow:true,
+				    actionBottom:false,
+				    actionCenter:true
+	        });
+	        
+	        $(".btn-config").on("click",function(e){
+	        	e.preventDefault();
+	        	inVal=parseInt($("#configDiv").find(".input-code").val());//输入的值
+	        
+	        	$("#mask").click();
+	        	if((isTrue==inVal)&&(inVal==4)){
+			       $("#deleteMerday").find(".is-person-name").text($perName);
+			       $("#deleteMerday").find(".is-gift-name").text($giftName);
+			 
+			       $("#deleteMerday").modal({
+				      maskName:"#mask",
+				      targetObject:"#deleteMerday",
+				      maskShadow:true,
+				      actionBottom:false,
+				      actionCenter:true
+			       });
+	    	    }else{
+	    		switch(inVal)
+                {
+                 case 1:
+                    $("#bWorning").find(".worning-content").text("该券码不存在");//1的状态表示不存在
+                    break;
+                 case 2:
+                    $("#bWorning").find(".worning-content").text("该券码已过期");//2的状态表示已过期
+                    break;
+                 case 3:
+                    $("#bWorning").find(".worning-content").text("该券码已过期");//2的状态表示已过期
+                    break;
+                 default:
+                   $("#bWorning").find(".worning-content").text("输入有误");//3的状态表示已使用
+                    break;
+                }
+	    		$("#bWorning").modal({
+				    maskName:"#mask",
+				    targetObject:"#bWorning",
+				    maskShadow:true,
+				    actionBottom:false,
+				    actionCenter:true
+	            });
+	            $("#bWorning").css({"height":$("#bWorning").outerHeight()+'px'});
+	            $("#bWorning").on("click",function(e){
+ 			       e.preventDefault();
+ 			       $("#mask").click();
+ 		        });
+ 		   
+	    	  }
+	        });
+			
+	    	
+			
+			$(".deletebtn").on("click",function(e){
+		        e.preventDefault();
+		        e.stopPropagation();
+		        $("#mask").click();
+		        
+	       });
+	       $(".canclebtn").on("click",function(e){
+	       	    e.preventDefault();
+	       	    $("#mask").click();
+	       	 
+	       });
+	       $("#mask").click(function(){
+ 		    	$("#controlTab").tab({
+			      tabItem:".tab-item",
+			      tabContent:".tab-content"
+		        });
+		       
+ 		    });
+ 		    
+	      
+
+	   });
+	   
+	   /*下拉说明*/
+	   $(".v-slide-down").on("click",function(e){
+	   	  e.preventDefault();
+	   	  var $datasrc=$(this).children("img").attr("datasrc");
+          var $src=$(this).children("img").attr("src");
+          
+	   	  var $par=$(this).closest(".address-footer");
+	   	  if($(this).hasClass("down-active")){
+	   	  	 $par.children(".text-warning").addClass("text-ellipsis");
+	   	  	 $(this).removeClass("down-active").children("img").attr({"src":$datasrc,"datasrc":$src});
+	   	  	 
+	   	  }else{
+	   	  	 $par.children(".text-warning").removeClass("text-ellipsis");
+	   	  	 $(this).addClass("down-active").children("img").attr({"src":$datasrc,"datasrc":$src});
+	   	  }
+	   });
+		
+ 	})
+ </script>
+ 
+	
+</body>
+</html>

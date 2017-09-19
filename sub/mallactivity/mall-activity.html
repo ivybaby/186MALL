@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>商场活动</title>
+    <link  rel="stylesheet" href="../../css/reset.css">
+    <link rel="stylesheet" href="../../css/idangerous.swiper.css" />
+    <link  rel="stylesheet" href="../../css/siteStyle.css">
+    <script type="text/javascript" src="../../js/jquery-1.8.3.min.js" ></script>
+    <style>
+    	body{padding-bottom: 40px;}
+    	.media-list img{ width: 100%;height: 100px;}
+    	.media-view-cell>a{padding-top: 0;padding-bottom: 0;padding-left: 0;}
+    	.time-icon img{width: 16px;margin-right: 3px;height: 16px;}
+    	.bottom-bar{background:none; }
+    	
+    	.inner-nbsp{height: 20px;margin: 10px 0;}
+    	.media-view-cell{padding: 0 5px;margin-bottom: 5px;}
+    	.media-body{ padding: 5px 0 5px 10px;}
+    	.click-like{ width:16px !important;height: 16px !important; }
+    	
+    	/*bar 底图*/
+      .bottom-bar-tab{-webkit-box-shadow:none;box-shadow: none;padding-top: 4px;height: 54px; background: none;}
+      .add-bg{overflow: hidden;padding-top: 0; background: #FFFFFF;}
+      .add-bg img{position: absolute;}
+      .add-bg img{ width: 100%; bottom: -4px;}
+    </style>
+</head>
+<body>
+<div id="">
+	<!-- bg-bar start-->
+<div class="squer-bottom-bar squer-bottom-bar-tab">
+    <img src="../../img/bar_bg.png"  />
+</div>
+<!-- bg-bar end-->
+    <!-- nav start-->
+    <nav class="nav">
+        <a href="javascript:history.go(-1)" class="nav-left" ><img src="../../img/back_icon.png" alt="back_icon" /></a>
+        <h1 class="text-center">商场活动</h1>
+        <a href="#" class="nav-right upload-icon" style="color: #FFFFFF;font-size: 22px;top:4px;">&bull;&bull;&bull;</a>
+    </nav>
+    <!-- nav end-->
+    
+     <!-- row start -->
+    <div id="slidePhoto" class="row cl" style="height: 180px; position: relative;">
+       <div class="device" style="height: 180px;box-shadow:none;">
+          <a class="arrow-left" href="#"></a> 
+          <a class="arrow-right" href="#"></a>
+          <div class="swiper-container" style="height: 180px;">
+              <div class="swiper-wrapper">
+                  <div class="swiper-slide swiper-img" datasrc=""><img src="../../img/slider1-1.png" ></div>
+                  <div class="swiper-slide swiper-img" datasrc=""><img src="../../img/slider1-2.png"></div>
+                  <div class="swiper-slide swiper-img" datasrc=""><img src="../../img/bb.jpg" ></div>
+                  <div class="swiper-slide swiper-img" datasrc=""><img src="../../img/card_code_2.png" ></div>
+                  <div class="swiper-slide swiper-img" datasrc=""><img src="../../img/media_1.jpg" ></div>
+                  <div class="swiper-slide swiper-img" datasrc=""><img src="../../img/receipt.jpg" ></div>
+              </div>
+         </div>
+      </div>
+      <div class="pagination"></div>
+    </div>
+    <!-- row end -->	
+    
+    <!--form start-->
+    <form action="#" name="">
+       <ul class="media-list">
+       	<li class="media-view-cell">
+       	  <a href="../joinactivity/activity-more.html" class="cl row">
+       		<div class="col-sm-5">
+       		    <img src="../../img/media_1.jpg" alt="media_list_photo" />
+       		</div>
+       		<div class="media-body col-sm-7 text-warning">
+       			<div class="row media-body-title text-default">活动名称<img src="../../img/activity_collect_nor_icon.png" class="pull-right click-like" datasrc="../../img/activity_collect_active_icon.png"  /></div>
+       			<div class="inner-nbsp"></div>
+       			<div class="row"><label class="text-init smaller time-icon"><img src="../../img/activity_time_icon.png" />活动时间</label><span class="pull-right btn btn-orange btn-new">报名</span></div>
+       		</div>
+       	  </a>
+       	</li>
+       	
+        <li class="media-view-cell">
+       	  <a href="../joinactivity/activity-more.html" class="cl row">
+       		<div class="col-sm-5">
+       		    <img src="../../img/media_1.jpg" alt="media_list_photo" />
+       		</div>
+       		<div class="media-body col-sm-7 text-warning">
+       			<div class="row media-body-title text-default">活动名称<img src="../../img/activity_collect_nor_icon.png" class="pull-right click-like" datasrc="../../img/activity_collect_active_icon.png"  /></div>
+       			<div class="inner-nbsp"></div>
+       			<div class="row"><label class="text-init smaller time-icon"><img src="../../img/activity_time_icon.png" />活动时间</label><span class="pull-right btn btn-purple btn-new">报名</span></div>
+       		</div>
+       	  </a>
+       	</li>
+       	 	<li class="media-view-cell">
+       	  <a href="../joinactivity/activity-more.html" class="cl row">
+       		<div class="col-sm-5">
+       		    <img src="../../img/media_1.jpg" alt="media_list_photo" />
+       		</div>
+       		<div class="media-body col-sm-7 text-warning">
+       			<div class="row media-body-title text-default">活动名称<img src="../../img/activity_collect_nor_icon.png" class="pull-right click-like" datasrc="../../img/activity_collect_active_icon.png"  /></div>
+       			<div class="inner-nbsp"></div>
+       			<div class="row"><label class="text-init smaller time-icon"><img src="../../img/activity_time_icon.png" />活动时间</label><span class="pull-right btn btn-green btn-new">报名</span></div>
+       		</div>
+       	  </a>
+       	</li>
+       	
+       </ul>
+       
+    </form>
+    <!--form end-->
+    
+    <!-- 底部背景 -->
+    <div class="bottom-bar bottom-bar-tab add-bg" > 
+		   <img src="../../img/bar_bg.png"  />
+    </div>
+    <!-- bottom-bar start-->
+    <div class="bottom-bar bottom-bar-tab" style="-webkit-box-shadow:none;box-shadow: none;">
+			<a class="bottom-tab-item" href="../mallactivity/mall-activity.html" id='' data-src="../../img/index_btm_1_normal.png">
+				<p><img src="../../img/index_btm_1_active.png" alt="时间" style="width:28px;"/></p>
+				<span class="tab-label text-blue">活动</span>
+			</a>
+			<a class="bottom-tab-item" href="../pointmall/point-mall.html" id='' data-src="../../img/index_btm_2_active.png">
+				<p><img src="../../img/index_btm_2_normal.png" alt="状态" style="width:28px;"/></p>
+				<span class="tab-label">积分商城</span>
+			</a>
+			<a class="bottom-tab-item" href="../../index-railway-new.html" id='' data-src="../../img/member_center_active_icon.png">
+				<p><img src="../../img/index_btm_3_normal.png" alt="状态" style="width:28px;"/></p>
+				<span class="tab-label">会员中心</span>
+			</a>
+	</div>
+	<!-- bottom-bar end-->
+	
+<div class="bg-bottom-bar bg-bottom-bar-tab" style="background:url(../../img/dotted_bg.jpg) repeat-x;">
+</div>
+</div>
+
+<div id="mask" class="cl"></div>
+<!-- -->
+<div id="showBigImg" class="cl">
+</div>
+
+ <script type="text/javascript" src="../../js/normal-js.js" ></script>
+ <script type="text/javascript" src="../../js/idangerous.swiper.min.js" ></script>
+
+ <script>
+ 	$(function(){
+ 		$(".swiper-img").on("click",function(e){
+ 	    	e.preventDefault();
+ 	    	$(this).ahrefTarget();
+ 	    
+ 	    });
+ 		
+       $("#controlTab").tab({
+			tabItem:".tab-item",
+			tabContent:".tab-content"
+		});
+		
+		//收藏
+        $(".click-like").each(function(){
+			$(this).on("click",function(e){
+				e.preventDefault();
+				var $dataSrc=$(this).attr("datasrc");
+				$(this).attr({"datasrc":$(this).attr("src"),"src":$dataSrc});
+				if($dataSrc.indexOf("active")>0){
+					//tips提示信息
+        	        $.fn.tips({
+        		       tipInsert:"#slidePhoto",
+        		       tipName:"#tips",
+        		       tipContent:"收藏成功！"
+        	        });
+				}
+				
+			});
+
+		});
+		
+		
+		//搜索框
+		$(".search-btn").on("click",function(e){
+			e.preventDefault();
+			var $parent=$(this).closest(".replaceSearch");
+			$parent.css({"display":"none"});
+			$parent.next(".searchBar").css({"display":"block"});
+			$(".searchBar").find("input").focus(function(){
+				$(this).closest(".searchBar").find(".cancel-icon").css({"display":"inline-block"});
+				
+				$(".col-sm-1").children(".cancel-icon").on("click",function(e){
+				   e.preventDefault();
+				   $(".searchBar").find("input").val("");
+	           });
+			});
+	
+		});
+		
+		//取消
+		$(".cancel-back").on("click",function(e){
+			e.preventDefault();
+
+			$(".searchBar").css({"display":"none"});
+			$(".replaceSearch").css({"display":"block"});
+			
+		});
+		var screenHeight=document.body.scrollHeight;//屏幕的高度
+		var actHeight=screenHeight-$(".nav").outerHeight()-$(".spt-search").outerHeight();
+		$("#minmask").css({"height":actHeight+'px',"top":$(".nav").outerHeight()-$(".spt-search").outerHeight()+'px'});
+		
+		$(".slide-floor").getSlide({
+			slideFloor:".slide-floor",//外包
+			slideFloorView:".slide-floor-view",//楼层业态外包
+			slideFloorList:".slide-floor-list",//对应内容父级
+			slideCell:".slide-cell",//楼层业态分别对应
+			mask:"#minmask"
+		});
+		
+		
+		var time;
+		var screenWidth=document.body.scrollWidth;//屏幕的宽度
+		$(".swiper-container").css({"width":screenWidth+'px'});
+		var mySwiper = new Swiper('.swiper-container',{
+             pagination: '.pagination',
+             loop:false,
+             grabCursor: true,
+             paginationClickable: true
+        })
+        $('.arrow-left').on('click', function(e){
+             e.preventDefault();
+             mySwiper.swipePrev();
+        })
+        $('.arrow-right').on('click', function(e){
+            e.preventDefault();
+            mySwiper.swipeNext();
+         });
+         $(".pagination").children(".swiper-pagination-switch").each(function(i){
+         		$(this).attr("role",i+1);
+    
+         });
+         time=setInterval(function(){
+         	var x=$(".pagination").children(".swiper-pagination-switch").length;
+         	var orole=$(".swiper-active-switch").attr("role");
+         	if(orole<x){
+         		mySwiper.swipeNext();
+         	}else{
+         		$(".pagination").children(".swiper-pagination-switch").each(function(i){
+         			if(i==0){
+         				$(this).click();
+         			}
+         		});
+         	}
+         	
+         },4000);
+        
+		
+		/* 点击图片 start */
+		var screenHeight=document.body.scrollHeight;//屏幕的高度
+		var screenWidth=document.body.scrollWidth;//屏幕的宽度
+		
+		var $obj=$("#showBigImg");
+		var isOver=false;
+		
+        $(".show-orient").on("click",function(e){
+			e.preventDefault();
+		
+			var ohref=$(this).attr("src");
+			
+			$obj.append("<img src='"+ohref+"' />");
+			
+		
+			$obj.modal({
+				    maskName:"#mask",
+				    targetObject:"#showBigImg",
+				    maskShadow:true,
+				    actionBottom:false,
+				    actionCenter:true,
+				    doubleNum:true,
+				    getOverflow:true
+	        }); 
+	       
+	       $("#mask").on("click",function(){
+	       	   $("#showBigImg img").remove();
+	       });
+		});
+	   
+		
+ 	})
+ </script>
+ 
+	
+</body>
+</html>

@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>大转盘抽奖</title>
+    <link  rel="stylesheet" href="../../css/reset.css">
+    <link  rel="stylesheet" href="../../css/siteStyle.css">
+    	<link rel="stylesheet" href="../../css/rotaryStyle.css" />
+    <script type="text/javascript" src="../../js/jquery-1.8.3.min.js" ></script>
+    <style>
+    	.inner-nbsp{margin: 8px auto;height: 30px;}
+    	
+    	.delete-icon{width: 20px !important;height: 20px !important;margin-right: 0 !important;}
+    	#deleteMerday{height: 110px;}
+    	
+    	#cardCode{ max-width: 98%;padding:0 10px; width: 98%;height:400px;border-radius: 0;
+    -moz-border-radius: 0;
+    -webkit-border-radius: 0; background: none;}
+       
+    	#cardCode .row a{display: inline-block;}
+    	#cardCode .img-second img{ width: 160px;height: 160px; margin: auto;}
+    	#cardCode .img-active img{ width: 100%;height: 84px;}
+    	#cardCode p{margin-bottom: 20px;}
+    	p.p-worning{margin: 20px auto 0; letter-spacing: 1px;}
+    	/*关闭按钮*/
+    	#cardCode .close-bt{vertical-align: baseline;}
+    	#cardCode .close-bt img{ width: 18px;}
+    	
+    	.card-bg{height: 170px;}
+    	.card-bg img{height: inherit;}
+    	.mycard-box-img{ position: relative;background:url(../../img/my_card_bg.png) bottom repeat-x;}
+
+    
+    </style>
+</head>
+<body>
+<div id="collectFocusIndex">
+	<!-- bg-bar start-->
+    <div class="squer-bottom-bar squer-bottom-bar-tab">
+       <img src="../../img/bar_bg.png"  />
+    </div>
+    <!-- bg-bar end-->
+	
+    <!--nav start-->
+    <nav class="nav">
+        <a href="javascript:history.go(-1)" class="nav-left" ><img src="../../img/back_icon.png" alt="back_icon" /></a>
+        <h1 class="text-center">大转盘抽奖</h1>
+        <a href="#" class="nav-right"></a>
+    </nav>
+    <!--nav end-->
+    
+    <!--form start-->
+    <form action="#" name="">
+       <ul class="media-list">
+       	<li class="media-view-cell">
+       	  <a href="javascript:void(0);" class="cl row">
+       		<div class="col-sm-4">
+       		    <img src="../../img/media_1.jpg" alt="media_list_photo" />
+       		</div>
+       		<div class="media-body col-sm-8 text-warning">
+       			<div class="row media-body-title text-default">数码相机现金领用券<button class="btn btn-small btn-smaller btn-primary pull-right btn-orange btn-exchange">兑奖</button></div>
+       			<div class="inner-nbsp"></div>
+       			<p class="row small"><span class="btn-blue btn-time">时间：</span>2016年12月04日<img src="../../img/address_delete_icon.png" class="pull-right delete-icon" /></p>
+       		</div>
+       	  </a>
+       	</li>
+       	<li class="media-view-cell">
+       	  <a href="javascript:void(0);" class="cl row">
+       		<div class="col-sm-4">
+       		    <img src="../../img/media_1.jpg" alt="media_list_photo" />
+       		</div>
+       		<div class="media-body col-sm-8 text-warning">
+       			<div class="row media-body-title text-default">手机iphone6s</div>
+       			<div class="inner-nbsp"></div>
+       			<p class="row smaller"><span class="btn-blue btn-time">时间：</span>2016年12月04日<img src="../../img/address_delete_icon.png" class="pull-right delete-icon" /></p>
+       		</div>
+       	  </a>
+       	</li>
+       
+       	
+       </ul>
+       
+    </form>
+    <!--form end-->
+    <div class="bg-bottom-bar bg-bottom-bar-tab" style="background:url(../../img/dotted_bg.jpg) repeat-x;">
+    </div>
+</div>
+<div id="mask" class="cl"></div>
+<div id="deleteMerday" class="cl">
+    <h4 class="row text-center small">是否删除?</h4>
+    <div class="row text-center" style="margin-top: 20px;">
+    	 <a href="#" class="btn btn-primary btn-smaller btn-block pull-left deletebtn dialog-btn" >确定</a>
+         <a href="#" class="btn btn-smaller btn-block pull-right canclebtn dialog-btn" >取消</a>
+    </div>
+</div>
+
+<!-- 使用二维码 -->
+<div id="cardCode" class="cl">
+	<div class="row">
+		<span class="close-bt pull-right"><img src="../../img/card_close.png" /></span>
+	</div>
+	
+	<p class="text-white text-center"><span style="margin-right: 10px;">N0.1028&nbsp;17&nbsp;3482</span>乐享会员</p>
+	<div class="cl" style="margin-bottom: 20px;">
+		<a href="#" class="card-code-img img-active cl"><img src="../../img/two_code_1.png" /></a>
+	</div>
+	<div class="row text-center">
+		<a href="#" class="card-code-img img-second cl" ><img src="../../img/two_code_2.png"  /></a>
+	</div>
+	<p class="text-white text-center p-worning">使用时请将此页面出示给工作人员</p>
+   <!-- <div class="row text-center card-img" id="code1">
+    	<img src="../../img/card_code_2.png" alt="二维码" class="use-code-img"/>
+    </div>
+    <div class="row text-center card-img" id="code2">
+    	<img src="../../img/card_code_1.png" alt="二维码" class="use-code-img"/>
+    </div>-->
+    <!--
+    <img src="../img/cancel_icon.png"  class="close-icon" />-->
+   <!-- <div class="row text-center cancel">
+    	<img src="../../img/cancel_icon.png" />
+   </div>-->
+</div>
+
+
+<!-- 消息提示  -->
+<div id="alertDialog" class="cl">
+	<div class="alert-box cl">
+		<img src="../../img/alert_ratory.png" class="dialog-bg" />
+		<!-- 中奖提示 start -->
+		<div class="alert-item cl alert-item-1"> 
+			<div class="item-img cl">
+				<img src="../../img/prize_item_1.png"  />
+			</div>
+			<p class="text-center">恭喜您，获得xxxx元物业抵扣券<br/>请在指定日期到物业进行使用</p>
+		</div>
+		<!-- 一等奖 end -->
+
+		
+		<!-- 四等奖 start -->
+		<div class="alert-item cl alert-item-4"> 
+			<div class="item-img cl">
+				<img src="../../img/prize_item_4.png"  />
+				<h4 class="text-center text-white">继续抽？没问题！</h4>
+			</div>
+			
+			<p class="text-center">推荐好友注册继续抽奖</p>
+		</div>
+		<!-- 四等奖 end -->
+		
+		<!-- 五 start -->
+		<div class="alert-item cl alert-item-5"> 
+			<div class="item-img cl">
+				<img src="../../img/prize_item_4.png"  />
+				<h4 class="text-center text-white">活动已结束</h4>
+			</div>
+			
+			<p class="text-center">抱歉，该活动已经结束！</p>
+		</div>
+		<!-- 五 end -->
+	</div>
+	
+    <div class="row text-center" style="margin-top: 10px;">
+    	 <button href="#" class="btn btn-block btn-primary get-know" >知道了</button>
+    </div>
+</div>
+
+
+ <script type="text/javascript" src="../../js/normal-js.js" ></script>
+ <script>
+ 	$(function(){
+ 		$("#alertDialog").css({"height":$("#alertDialog").outerHeight()+'px'});
+ 		
+ 		$(".delete-icon").on("click",function(e){
+			e.preventDefault();
+			var $thisparent=$(this).closest(".media-view-cell");
+			
+			$("#deleteMerday").modal({
+				maskName:"#mask",
+				targetObject:"#deleteMerday",
+				maskShadow:true,
+				actionBottom:false,
+				actionCenter:true
+			});
+			$(".deletebtn").on("click",function(e){
+		        e.preventDefault();
+		        e.stopPropagation();
+		        $("#mask").click();
+		        $thisparent.remove();
+	       });
+	       $(".canclebtn").on("click",function(e){
+	       	    e.preventDefault();
+	       	    $("#mask").click();
+	       	  
+	       });
+
+	   });
+	   var awards=4;//出现不同三种情况
+	   $(".btn-exchange").on("click",function(e){
+			e.preventDefault();
+			$("#cardCode").modal({
+				    maskName:"#mask",
+				    targetObject:"#cardCode",
+				    maskShadow:true,
+				    actionBottom:false,
+				    actionCenter:true,
+				    getOverflow:true
+	       });
+	        $("#cardCode .cancel,.close-bt").on("click",function(e){
+ 			   e.preventDefault();
+ 			   $("#mask").click();
+ 		    });
+ 		    $("#mask").on("click",function(){
+ 		    	$(".alert-item").hide();
+ 		    	switch(awards){
+						case 1:
+						   $(".alert-box").children(".alert-item-"+awards+"").show();
+						   break;
+						case 5:
+						   $(".alert-box").children(".alert-item-"+awards+"").show();
+						   break;
+						default:
+						   $(".get-know").text("增加抽奖机会");
+						   $(".alert-box").children(".alert-item-"+awards+"").show();
+					}
+ 		    	
+ 		    	$("#alertDialog").modal({
+				    maskName:"#mask",
+				    targetObject:"#alertDialog",
+				    maskShadow:true,
+				    actionBottom:false,
+				    actionCenter:true
+	            });
+	            
+	            $(".get-know").on("click",function(e){
+	       	        e.preventDefault();
+	       	        $("#mask").click();
+	       	        $(this).text("知道了");
+	       	  
+	             });
+
+	            // $(this).text("知道了");
+ 		    
+ 		    });
+ 		    
+		});
+ 	})
+ </script>
+</body>
+</html>

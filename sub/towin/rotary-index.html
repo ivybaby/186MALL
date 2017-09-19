@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta charset="UTF-8">
+   <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+   <title>大转盘抽奖</title>
+   <link  rel="stylesheet" href="../../css/reset.css">
+   <link rel="stylesheet" type="text/css" href="../../css/rotaryStyle.css" />
+   <link rel="stylesheet" href="../../css/siteStyle.css" />
+   <style>
+   	  .media-list{background: none;}
+   	  .media-view-cell{position: relative;}
+   	  .tran-list{margin-top:10px;padding-top:10px;margin-bottom: 50px; height: 180px; overflow: hidden;position: relative;}
+   	  .media-view-cell>a{ border-bottom: none;padding:8px 0;}
+      
+      .gift-name{padding: 12px 0;max-width: 100px;}
+      .message-sentence{margin-top: 5px;}
+      
+      body,.bottom-bar{background-color:#a7d4ee;}
+      .bottom-bar{bottom: 0;}
+      .bottom-bar,.bottom-bar-tab .bottom-tab-item{height: 40px;color: #cc0099;}
+      
+      #configDiv{
+        	display: none;
+            position: absolute; 
+            width: 100%; 
+            max-width:100%;
+            height:100%;
+
+            z-index:1003; 
+            overflow: auto;
+            overflow: hidden;
+        }
+        .share-tip{position: absolute; top: 48px;right: 0; width: 75%;}
+        
+        .get-time{display: inherit;font-size: 10px;color:#cc0099;}
+        .alert-infor{height: auto;}
+        .alert-item p {
+            line-height: 1.3em;
+            padding-top: 3%;
+        }
+   </style>
+</head>
+<body>
+<div class="row bg-box">
+	<img src="../../img/beijing.jpg" class="bg-rotary"/> 
+</div>
+<p class="btn btn-small btn-smaller btn-primary point-fix small">活动细则>></p>
+
+<!--效果html开始-->
+<div class="rotary cl">
+	<div class="rotaryBox cl">
+		<img src="../../img/bg1.png" class="rotary-bg" /> 
+		<div class="rotaryArrow cl" id="rotaryArrow">
+			<img src="../../img/arrow.png"  />
+		</div>
+	</div>
+
+	<div class="result" id="result">
+		<p id="resultTxt"></p>
+		<a href="javascript:" id="resultBtn" title="关闭">关闭</a>
+	</div>
+	  
+</div>
+<div class="row row-padding tran-list">
+	  <ul class="media-list small">
+       	
+       	<li class="media-view-cell">
+       	  <a href="javascript:void(0)" class="cl row">
+       	  	<div class="col-sm-8">
+       	  		<div class="col-sm-3">
+       			<div class="media-message apply">
+       				<img src="../../img/media_1.jpg" class="media_list_head show-orient" style="width: 40px;height: 40px;" />
+       			</div>
+       		    
+       		</div>
+       		<div class="media-body col-sm-9">
+       			<div class="row media-body-title text-default">
+       				<span class="person-name">昵称-1</span>&nbsp;186541582203
+       			</div>
+       			<p class="row message-sentence" >
+       				<span class="pull-left">2016-11-30&nbsp;14:20</span>	
+       			</p>
+       		</div>
+       	  	</div>
+       	  	<div class="col-sm-4  text-ellipsis">
+       	  		<p class="pull-right gift-name">苹果6s手机</p>
+       	  	</div>
+       		
+       	  </a>
+       	</li>
+       	
+       		<li class="media-view-cell">
+       	  <a href="javascript:void(0)" class="cl row">
+       	  	<div class="col-sm-8">
+       	  		<div class="col-sm-3">
+       			<div class="media-message apply">
+       				<img src="../../img/media_1.jpg" class="media_list_head show-orient" style="width: 40px;height: 40px;" />
+       			</div>
+       		    
+       		</div>
+       		<div class="media-body col-sm-9">
+       			<div class="row media-body-title text-default">
+       				<span class="person-name">昵称-2</span>&nbsp;186541582203
+       			</div>
+       			<p class="row message-sentence" >
+       				<span class="pull-left">2016-11-30&nbsp;14:20</span>	
+       			</p>
+       		</div>
+       	  	</div>
+       	  	<div class="col-sm-4  text-ellipsis">
+       	  		<p class="pull-right gift-name">苹果6s手机</p>
+       	  	</div>
+       		
+       	  </a>
+       	</li>
+       	
+       	<li class="media-view-cell">
+       	  <a href="javascript:void(0)" class="cl row">
+       	  	<div class="col-sm-8">
+       	  		<div class="col-sm-3">
+       			<div class="media-message apply">
+       				<img src="../../img/media_1.jpg" class="media_list_head show-orient" style="width: 40px;height: 40px;" />
+       			</div>
+       		    
+       		</div>
+       		<div class="media-body col-sm-9">
+       			<div class="row media-body-title text-default">
+       				<span class="person-name">昵称-3</span>&nbsp;186541582203
+       			</div>
+       			<p class="row message-sentence" >
+       				<span class="pull-left">2016-11-30&nbsp;14:20</span>	
+       			</p>
+       		</div>
+       	  	</div>
+       	  	<div class="col-sm-4  text-ellipsis">
+       	  		<p class="pull-right gift-name">苹果6s手机</p>
+       	  	</div>
+       		
+       	  </a>
+       	</li>
+       	
+       		<li class="media-view-cell">
+       	  <a href="javascript:void(0)" class="cl row">
+       	  	<div class="col-sm-8">
+       	  		<div class="col-sm-3">
+       			<div class="media-message apply">
+       				<img src="../../img/media_1.jpg" class="media_list_head show-orient" style="width: 40px;height: 40px;" />
+       			</div>
+       		    
+       		</div>
+       		<div class="media-body col-sm-9">
+       			<div class="row media-body-title text-default">
+       				<span class="person-name">昵称-4</span>&nbsp;186541582203
+       			</div>
+       			<p class="row message-sentence" >
+       				<span class="pull-left">2016-11-30&nbsp;14:20</span>	
+       			</p>
+       		</div>
+       	  	</div>
+       	  	<div class="col-sm-4  text-ellipsis">
+       	  		<p class="pull-right gift-name">苹果6s手机</p>
+       	  	</div>
+       		
+       	  </a>
+       	</li>
+     
+      
+       </ul>
+</div>
+
+<div class="bottom-bar bottom-bar-tab" >
+	    <a class="bottom-tab-item join-in text-center" href="javascript:void(0)" datasrc="check-prize.html" data-src="">
+			查看我的奖品
+		</a>
+</div>
+
+<div id="mask" class="cl"></div>
+<!--  -->
+<div id="alertDialog" class="cl">
+	<div class="alert-box cl">
+		<img src="../../img/alert_ratory.png" class="dialog-bg" />
+		<!-- 一等奖 start -->
+		<div class="alert-item cl alert-item-1"> 
+			<div class="item-img cl">
+				<img src="../../img/new_change_1.jpg"  />
+			</div>
+			<p class="text-center">恭喜您<br/>获得1860元物业费抵扣券!</p>
+			<span class="get-time">请于6月30日前到物业中心领取</span>
+	</div>
+		<!-- 一等奖 end -->
+		
+		<!-- 二等奖 start -->
+		<div class="alert-item cl alert-item-2"> 
+			<div class="item-img cl">
+				<img src="../../img/new_change_2.jpg"  />
+			</div>
+			<p class="text-center">恭喜您<br/>获得186元物业费抵扣券!</p>
+			<span class="get-time">请于6月30日前到物业中心领取</span>
+		</div>
+		<!-- 二等奖 end -->
+		
+		<!-- 三等奖 start -->
+		<div class="alert-item cl alert-item-3"> 
+			<div class="item-img cl">
+				<img src="../../img/new_change_3.jpg"  />
+			</div>
+			
+		    <p class="text-center">恭喜您<br/>获得精美小礼品一份</p><span class="get-time">请于6月30日前到物业中心领取</span>
+			
+			
+		</div>
+		<!-- 三等奖 end -->
+		
+		<!-- 四等奖 start -->
+		<div class="alert-item cl alert-item-4"> 
+			<div class="item-img cl">
+				<img src="../../img/prize_item_4.png"  />
+				<h4 class="text-center text-white">继续抽？没问题！</h4>
+			</div>
+			
+			<p class="text-center">推荐好友注册继续抽奖</p>
+		</div>
+		<!-- 四等奖 end -->
+		
+		<!-- 五 start -->
+		<div class="alert-item cl alert-item-5"> 
+			<div class="item-img cl">
+				<img src="../../img/prize_item_4.png"  />
+				<h4 class="text-center text-white">活动已结束</h4>
+			</div>
+			
+			<p class="text-center">抱歉，该活动已经结束！</p>
+		</div>
+		<!-- 五 end -->
+	</div>
+	
+    <div class="row text-center" style="margin-top: 10px;">
+    	 <button href="#" class="btn btn-block btn-primary deletebtn" >知道了</button>
+    </div>
+</div>
+
+
+<!--详情 -->
+<div id="mask-inner" class="cl">
+    <div class="row mask-img mask-out">
+    	<h5 class="small">如何获取积分</h5>
+    	<ul>
+    		<li>上传购物小票可获得积分</li>
+    		<li>签到可获得积分</li>
+    		<li>收藏与关注商铺可获得积分</li>
+    		<li>转发商铺及活动课获得积分</li>
+    		<li>转发获得二次的可获得双倍积分</li>
+    		<li>积分商城兑换礼品</li>
+    		<li>积分抵扣停车费</li>
+    		<li>积分抵扣包装盒支付</li>
+    	</ul>
+    </div>
+    <div class="row text-center cancel">
+    	<img src="../../img/cancle_blue_icon.png"  />
+    </div>
+</div>
+
+<!-- 验证 -->
+<div id="configDiv" class="cl row row-padding">
+	<img src="../../img/share_tip.png"  class="share-tip"/>
+	<div>
+		
+	</div>
+</div>
+
+<script type="text/javascript" src="../../js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="../../js/jquery.rotate.min.js"></script>
+<script type="text/javascript" src="../../js/normal-js.js" ></script>
+ <script type="text/javascript" src="../../js/TileHeadPic.js" ></script>
+<script type="text/javascript">
+$(function(){
+	$(".join-in").on("click",function(e){
+		e.preventDefault();
+		$(this).ahrefTarget();
+	});
+	
+	$('.apply img').jqthumb({
+		    width: 40,
+		    height: 40,
+		    zoom:2,
+		    after: function(imgObj){
+			   imgObj.css('opacity', 0).animate({opacity: 1},1000);
+		    }
+	    });
+	$("#alertDialog").css({"width":parseInt($("#alertDialog").outerWidth())+'px'});
+	$("#alertDialog .alert-box").css({"height":$("#alertDialog").outerWidth()+'px'});
+	$("#alertDialog .item-img,#alertDialog .dialog-bg").css({"height":($("#alertDialog").outerWidth()*0.7273)+'px'});
+	$("#alertDialog,#alertDialog .alert-item").css({"height":$("#alertDialog").outerHeight()+'px'});
+	var vheight=$("#alertDialog .item-img").outerHeight()*0.75;
+	var vWidth=($("#alertDialog .item-img").outerHeight()*0.25)/2;
+	$("#alertDialog .item-img img").css({"height":vheight+'px',"width":vheight+'px',"margin-top":vWidth+'px',"margin-bottom":vWidth+'px'});
+	
+	
+	
+	
+	var time;
+	var $par;
+	var timeVal=0;
+	function listTime(){
+		/*$par=$(".media-list");
+		var vlen=$(".media-view-cell").length;
+		var maxTop=360;//最大可上滑得高度
+		timeVal=timeVal-60;//每次上滑得距离
+		
+		if(maxTop<-(timeVal)-60){
+	       timeVal=0;	
+		}
+		$par.animate({ 
+               marginTop:timeVal
+        }, 3000);
+		$par.append($(".media-view-cell").eq(0));
+		
+	  // alert(maxTop+' '+timeVal);*/
+	   $par=$(".media-list");
+	   var $item=$(".media-view-cell");
+	   $item.eq(0).animate({
+           opacity:0
+       }, 1000);
+       $item.eq($item.length-1).animate({
+           opacity:1
+       });
+	   $par.append($item.eq(0));
+   
+		time=setTimeout(listTime,3000);
+	}
+	//alert($(".media-list").position().top);
+	
+	if($(".media-view-cell").length>3){
+		/*if($(".media-view-cell").length<6){
+		  var temp=$(".media-view-cell").length;
+		  for(var i=0;i<(6-temp);i++){
+			$(".media-list").append($(".media-view-cell").eq(i).clone(true));
+		  }
+	    }*/
+		setTimeout(listTime,3000);
+	}
+	
+	
+	
+	
+	var $rotaryArrow = $('#rotaryArrow');
+	var $result = $('#result');
+	var $resultTxt = $('#resultTxt');
+	var $resultBtn = $('#result');
+	
+	var maxCount_nor=[100,10,7000];
+	var maxCount=maxCount_nor;//复制一个数组
+	
+	maxCount.sort(function(a,b){//排序
+      return a>b;
+    });
+    
+    function gcd(  n,  m ){ //求最大公约数
+      if( m == 0 ) return n; 
+      return gcd( m, n % m ); 
+    } 
+   
+    var tag=gcd(maxCount[0],maxCount[1]);
+    var gcd_val=tag;
+    for(var i=2;i<maxCount.length;i++){//数组求最大公约数
+    	gcd_val=gcd(gcd_val,maxCount[i]);
+    }
+	for(var i=0;i<maxCount.length;i++){//数组除去最大公约数
+		maxCount[i]=maxCount[i]/gcd_val;
+	}
+	
+	var dataArray=[];
+	for(var j=0;j<maxCount.length;j++){//创建一个概率数组
+		for(var i=0;i<maxCount[j];i++){
+			dataArray.push(maxCount[j]);//maxCount=[1,10,700];dataArray=[1,10,10,10,10,10,10,10,10,10,10,10,700,700,700,700,700,700,700...];
+		}
+	}
+	
+    dataArray=[5];
+	$rotaryArrow.click(function(){
+		//var data = [0, 1, 2, 3, 4, 5, 6, 7];
+		var val = dataArray[Math.floor(Math.random()*dataArray.length)];
+		//alert(val);
+		var angle;
+		switch(val){
+			case maxCount[0]: //一等奖 
+			    var v=[0, 1];
+			    var rv=v[Math.floor(Math.random()*v.length)];//页面显示有两部分
+			    
+			    if(rv==0){
+					angle=Math.floor(Math.random()*18);
+			    	rotateFunc(1,angle,'恭喜您获得了 一等奖');
+			    }else{
+			    	angle=Math.floor(Math.random()*28)+330;
+			    	rotateFunc(1,angle,'恭喜您获得了 一等奖');
+			    }
+				//alert(rv+' '+angle);
+				break;
+			case maxCount[1]: //二等奖 
+			    var v=[0, 1];
+			    var rv=v[Math.floor(Math.random()*v.length)];//页面显示有两部分
+			   
+				if(rv==0){
+					angle=Math.floor(Math.random()*40)+95;
+			    	rotateFunc(2,angle,'恭喜您获得了二等奖');
+			    }else{
+			    	angle=Math.floor(Math.random()*50)+215;
+			    	rotateFunc(2,angle,'恭喜您获得了二等奖');
+			    }
+			    //alert(rv+' '+angle);
+				break;
+			case maxCount[2]: //三等奖 
+			    var v=[0, 1, 2];
+			    var rv=v[Math.floor(Math.random()*v.length)];//页面显示有三部分
+			   
+			    if(rv==0){
+			    	angle=Math.floor(Math.random()*50)+30;
+			    	rotateFunc(3,angle,'恭喜您获得了三等奖');
+			    }else if(rv==1){
+			    	angle=Math.floor(Math.random()*50)+150;
+			    	rotateFunc(3,angle,'恭喜您获得了 三等奖');
+			    }else{
+			    	angle=Math.floor(Math.random()*35)+275;
+			    	rotateFunc(3,angle,'恭喜您获得了 三等奖');
+			    }
+       		    break;
+			default:
+				rotateFunc(4,300);//增加抽奖机会
+		}
+		//alert(val);
+	});
+
+	var rotateFunc = function(awards,angle,text){  //awards:奖项，angle:奖项对应的角度
+		$rotaryArrow.stopRotate();
+		$rotaryArrow.rotate({
+			angle: 0,
+			duration: 5000,
+			animateTo: angle + 1440,  //angle是图片上各奖项对应的角度，1440是让指针固定旋转4圈
+			callback: function(){
+				clearTimeout(time);
+				//$resultTxt.html(text);
+				//$result.show();
+				var isMatch=true;//是否满足抽奖资格
+				var hasEnd=false;//活动是否结束
+				$(".alert-item").hide();
+				if(!(hasEnd)){
+					switch(awards){
+						case 1:
+						   $(".alert-box").children(".alert-item-"+awards+"").show();
+						   break;
+						case 2:
+						   $(".alert-box").children(".alert-item-"+awards+"").show();
+						   break;
+						case 3:
+						   $(".alert-box").children(".alert-item-"+awards+"").show();
+						   break;
+						default:
+						   $(".deletebtn").text("增加抽奖机会");
+						   $(".alert-box").children(".alert-item-"+awards+"").show();
+					}
+				}else{
+					$(".alert-box").children(".alert-item-"+5+"").show();
+				}
+				
+				$("#alertDialog").modal({
+				    maskName:"#mask",
+				    targetObject:"#alertDialog",
+				    maskShadow:true,
+				    actionBottom:false,
+				    actionCenter:true
+	            });
+			}
+		});
+	};
+
+	$resultBtn.click(function(){
+		$result.hide();
+	});
+	 
+	$("#alertDialog").on("click",function(e){
+			e.stopPropagation();//防止触发冒泡
+	});
+	$("#configDiv").css({"height":$("#configDiv").outerHeight()+'px'});
+	
+	$(".deletebtn").on("click",function(e){
+		    e.preventDefault();
+		    e.stopPropagation();
+		    var textName= $(this).text();
+		    if(textName=="增加抽奖机会"){
+		    	$("#mask").click();
+		    	$("#configDiv").modal({
+				    maskName:"#mask",
+				    targetObject:"#configDiv",
+				    maskShadow:true,
+				    actionBottom:false,
+				    actionCenter:true
+	            });
+	            $("#configDiv").on("click",function(e){
+	            	e.preventDefault();
+	            	$("#mask").click();
+	            });
+		        $(this).text("知道了");
+		    }else{
+		    	$("#mask").click();
+		    }
+		    
+		    listTime();
+		        
+	});
+	
+	//rotateFunc(1,60);
+	
+	$(".point-fix").on("click",function(e){
+			e.preventDefault();
+			$("#mask-inner").modal({
+				    maskName:"#mask",
+				    targetObject:"#mask-inner",
+				    maskShadow:true,
+				    actionBottom:false,
+				    actionCenter:true,
+				    getClose:true
+	       });
+	        //二维码
+	        $("#mask-inner .cancel").on("click",function(e){
+ 			   e.preventDefault();
+ 			   $("#mask").click();
+ 		    });
+   
+		});
+		$("#alertDialog").modal({
+				    maskName:"#mask",
+				    targetObject:"#alertDialog",
+				    maskShadow:true,
+				    actionBottom:false,
+				    actionCenter:true
+	            });
+	
+});
+</script>
+<!--效果html结束-->
+<div class="clear"></div>
+
+
+</body>
+</html>

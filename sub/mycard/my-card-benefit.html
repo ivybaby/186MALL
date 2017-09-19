@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>会员卡</title>
+    <link  rel="stylesheet" href="../../css/reset.css">
+    <link  rel="stylesheet" href="../../css/siteStyle.css">
+    <script type="text/javascript" src="../../js/jquery-1.8.3.min.js" ></script>
+    <style>
+    	body{ background: url(../../img/benefits_bg.png) center repeat; overflow: hidden; }
+    	form{padding:15px !important;}
+    	.benefit-body{background: #FFFFFF;height: 100%; overflow-y: scroll;padding: 15px 20px;}
+    	.benefit-head img{ width:140px;}
+    	
+    	.benefit-content{padding: 20px 0;}
+    	.benefit-content ul li{ word-break: break-all;line-height: 1.8em;}
+    	.benefit-content .benefit-flag{background: #d44f1b; color: #FFFFFF; border-radius: 8px; padding: 0 4px; margin-right: 5px;}
+    	.benefit-foot ol li{font-size: 10px;letter-spacing: 1px;}
+    </style>
+</head>
+<body class="cl">
+<div id="">
+	
+    <!-- nav start-->
+    <nav class="nav">
+        <a href="javascript:history.go(-1)" class="nav-left"><img src="../../img/back_icon.png" alt="back_icon" /></a>
+        <h1 class="text-center">会员权益</h1>
+    </nav>
+    <!-- nav end-->
+    
+    
+
+    <!-- form start-->
+    <form action="#" name="" id="" style="margin-top: 0;">
+       <div class="cl benefit-body width-100">
+       	  <div class="benefit-head text-center width-100">
+       	  	 <img src="../../img/benefits_title.png"  />
+       	  </div>
+       	  <div class="cl benefit-content">
+       	  	<ul class="small">
+       	  	   <li><span class="benefit-flag">1.会员卡开礼</span></li>
+       	  	   <li><span class="benefit-flag">2.购物折扣 </span>根据会员卡等级享受不同的折扣</li>
+       	  	   <li><span class="benefit-flag">3.特殊纪念日专享 </span>根据会员卡等级享不同积分</li>
+       	  	   <li><span class="benefit-flag">4.停车优惠</span>根据会员卡等级享不同优惠</li>
+       	  	   <li><span class="benefit-flag">5.积分换礼</span>您可享受中铁建"6街"、"186MALL"统一积分，并参与"186MALL"主题积分换礼活动，会员积分可以享"186MALL"进行通兑通换</li>
+       	  	   <li><span class="benefit-flag">6.活动专属通道 </span>您可享受中铁建"6街"、"186MALL"所有主题活动与会员专属活动，并有优先权益</li>
+       	  	   <li><span class="benefit-flag">7.会员VIP室</span>您可享会员VIP室饮品、糖果、阅读、休憩、网上冲浪等舒心的环境与体验</li>
+       	  	   <li><span class="benefit-flag">8.信息告知</span>  及时通过短信、微信信息推送等方式将主题活动、会员活动、商户特惠、新品活动等信息告知您</li>
+       	  	   <li><span class="benefit-flag">9.积分商城</span>您可以通过积分兑换、线上支付等方式优先选购我们线上产品</li>
+       	  	   <li><span class="benefit-flag">10.其他权利</span>购物免费包装、宠物寄存（根据后期招商情况确定）、免费叫车服务、免费“老公寄存” 、儿童体验性活动等</li>
+       	  	
+   
+       	    </ul>
+       	  </div>
+       	  <div class="cl benefit-foot">
+       	  	  <ol class="text-warning">
+       	  	  	 <li>注释：</li>
+       	  	  	 <li>1.铁瓷会会员卡仅限本人使用，同一手机号只能申请一张会员卡，会员卡不得转让或出借；</li>
+       	  	  	 <li>2.所有礼品及优惠为铁瓷会对会员的回馈，均不退换，不可开具发票，不得兑换现金。礼品数量有限，先到先得， 换完即止。成都186MALL微信服务号 “积分换礼”功能于2017年12月25日开通；</li>
+       	  	  	 <li>3.成都186MALL保留随时修订或更改会员手册的权利（包括但不限于会籍制度、积分规则、权益列表等）。如遇特殊推广促销等资讯调整情况，均以186MALL公告为准；</li>
+       	  	  	 <li>4. 若会员违反会员手册中条款，或利用其会员资格谋取不当利益、或发生欺诈、滥用奖励权利时，186MALL不对其违法犯罪行为负连带责任，并有权冻结其奖励回馈并终止 其会员资格；</li>
+       	  	  	 <li>5.上述会员手册之会员权益及条款之最终解释权归186MALL所有;</li>
+       	  	  </ol>
+       	  </div>
+       	  
+       </div>
+    </form>
+    <!-- form end-->
+    
+    
+
+</div>
+
+
+
+ <script type="text/javascript" src="../../js/normal-js.js" ></script>
+ <script>
+ 	$(function(){
+ 		//var screenHeight=document.body.scrollHeight;//屏幕的高度
+ 		var windowHeight=window.screen.height;
+ 		var oHeright=windowHeight-30;
+ 		if($("nav.nav").length>0){
+ 			oHeright=oHeright-$("nav.nav").outerHeight();
+ 			$(".benefit-body").css({"height":oHeright+'px'});
+ 		}else{
+ 			$(".benefit-body").css({"height":oHeright+'px'});
+ 		}
+ 		
+ 	})
+ </script>
+ 
+</body>
+</html>

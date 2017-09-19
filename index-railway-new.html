@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>会员中心</title>
+    <link  rel="stylesheet" href="css/reset.css">
+    <link  rel="stylesheet" href="css/siteStyle.css">
+    <script type="text/javascript" src="js/jquery-1.8.3.min.js" ></script>
+    <script type="text/javascript" src="js/clamp.min.js" ></script>
+    <style>
+    	#cardCode{ max-width: 80%; width: 300px;padding: 20px 10px; height:280px;border-radius: 4px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px; background: #FFFFFF;}
+       
+    	#cardCode .row a{display: inline-block;}
+    	#cardCode .img-second img{ width: 140px;height: 140px; margin: auto;}
+    	#cardCode .img-active img{ width: 100%;height: 84px;}
+    	
+      .nav-head-por{background: url(img/index_top_bg.jpg) center repeat; color:#FFFFFF; padding: 20px; }
+      .nav-head-por p{margin-top: 5px;}
+      .apply,.apply img{ width: 80px;height: 80px; margin: auto;}
+   
+      .list-group{padding:4px 5px;}
+      .list-group .list-view img{ width: 8px; vertical-align: baseline; }
+      .list-group .list-view{ border-bottom: none;background: #dcdcdc;margin-bottom: 3px;}
+      .list-group .list-view img.ext-icon{width: 22px !important;}
+      
+      .btn-userCode{padding: 10px 0;}
+      .btn-userCode img{padding: 4px; background: #FFFFFF; width: 65px;height: 65px;}
+   
+      .card-list{margin-top: 0;font-size: 15px;padding: 15px 0;}
+      .flag{position: relative;}
+      .flag img{width: 28px;margin-right: 8px;vertical-align: middle; }
+      .card-list .col-sm-6:first-of-type{border-right: 1px solid #FFFFFF;}
+      .flag-cell{font-size: 10px; background: #FFFFFF; border-radius: 50%;padding: 0 2px; text-align: center;display: inline-block; min-width: 20px; position: absolute;top:-8px;right: -15px;}
+      
+      /*bar 底图*/
+      .bottom-bar-tab{-webkit-box-shadow:none;box-shadow: none;padding-top: 4px;height: 54px; background: none;}
+      .add-bg{overflow: hidden;padding-top: 0; background: #FFFFFF;}
+      .add-bg img{position: absolute;}
+      .add-bg img{ width: 100%; bottom: -4px;}
+    </style>
+</head>
+<body>
+<div id="cl" style="padding-bottom: 5px;">
+	<!-- bg-bar start-->
+<div class="squer-bottom-bar squer-bottom-bar-tab">
+    <img src="img/bar_bg.png"  />
+</div>
+<!-- bg-bar end-->
+    <!-- nav start-->
+    <nav class="nav">
+        <a href="javascript:history.go(-1)" class="nav-left"><img src="img/back_icon.png" alt="back_icon" /></a>
+        <h1 class="text-center">会员中心</h1>
+    </nav>
+    <!-- nav end-->
+    <div class="row nav-head-por row-padding">
+    	<div class="col-sm-6">
+    	  <div class="apply text-center">
+       	    <a href="sub/personcenter/personal-center.html"><img src="img/media_1.jpg" class="media_list_head show-orient"/></a>
+       	  </div>
+    	  <p class="text-center">傻逼</p>
+    	</div>
+    	<div class="col-sm-6 btn-userCode text-center">
+    			    <img src="img/card_code_icon.png"  />
+    	</div>
+    </div>
+     <div class="row card-list btn-blue">
+    		<figure class="col-sm-6">
+    			<a href="sub/mymessage/my-message-infor.html" class="text-white"><span class="flag"><img src="img/index_message_icon.png" />我的消息&nbsp;<em class="flag-cell text-blue">11</em></span></a>
+    			<!--<a href="sub/mymessage/my-message-splendid-recommend.html" class="text-white"><span class="flag"><img src="img/index_message_icon.png" />新闻动态&nbsp;<em class="flag-cell text-blue">11</em></span></a>-->
+    		</figure>
+    		<figure class="col-sm-6">
+    			<p ><a href="sub/receiptpoint/available-point.html" class="text-white"> 可用积分:&nbsp;<span class="text-yellow">1980</span></a></p>
+    		</figure>
+    		
+    </div>
+    
+  <!-- form start-->
+    <form action="#" name="" id="" style="margin-top: 0;">
+        <!-- list-group start-->
+        <ul class="list-group">
+            <!-- list-view start -->
+            <li class="list-view">
+                <a href="sub/mycard/my-card.html" class="pull-right" >
+                	<div class="col-sm-2">
+                		<img class="ext-icon" src="img/index_list_1.png"  />
+                	</div>
+                	<div class="col-sm-10">
+                		<label>我的会员卡</label>
+                        <span class="pull-right">
+                    	  
+                           <img src="img/index_back_icon.png" alt="more" id=""/>
+                        </span>
+                	</div>
+                   
+                </a>
+            </li>
+            <!-- list-view end -->
+            
+            <!-- list-view start -->
+            <li class="list-view">
+                <a href="sub/myvoucher/my-voucher.html" class="pull-right" >
+                	<div class="col-sm-2">
+                		<img class="ext-icon" src="img/index_list_7.png"  />
+                	</div>
+                	<div class="col-sm-10">
+                		<label>我的代金券</label>
+                        <span class="pull-right">
+                    	  
+                           <img src="img/index_back_icon.png" alt="more" id=""/>
+                        </span>
+                	</div>
+                   
+                </a>
+            </li>
+            <!-- list-view end -->
+            
+            <!-- list-view start -->
+            <li class="list-view">
+                <a href="sub/giftpackage/my-gift.html" class="pull-right" >
+                	<div class="col-sm-2">
+                		<img  class="ext-icon" src="img/index_list_2.png"  />
+                	</div>
+                	<div class="col-sm-10">
+                		<label>我的礼品</label>
+                        <span class="pull-right">
+                    	 
+                           <img src="img/index_back_icon.png" alt="more" id=""/>
+                        </span>
+                	</div>
+                   
+                </a>
+            </li>
+            <!-- list-view end -->
+            <!-- list-view start -->
+            <li class="list-view">
+                <a href="sub/receiptpoint/available-point.html" class="pull-right" >
+                	<div class="col-sm-2">
+                		<img  class="ext-icon" src="img/index_list_3.png"  />
+                	</div>
+                	<div class="col-sm-10">
+                		<label>积分明细</label>
+                        <span class="pull-right">
+                    	
+                           <img src="img/index_back_icon.png" alt="more" id=""/>
+                        </span>
+                	</div>
+                   
+                </a>
+            </li>
+            <!-- list-view end -->
+            
+            <!-- list-view start -->
+            <li class="list-view">
+                <a href="sub/joinactivity/joined-activity.html" class="pull-right" >
+                	<div class="col-sm-2">
+                		<img  class="ext-icon" src="img/index_list_4.png"  />
+                	</div>
+                	<div class="col-sm-10">
+                		<label>参与的活动</label>
+                        <span class="pull-right">
+                    	 
+                           <img src="img/index_back_icon.png" alt="more" id=""/>
+                        </span>
+                	</div>
+                   
+                </a>
+            </li>
+            <!-- list-view end -->
+            
+            <!-- list-view start -->
+            <li class="list-view">
+                <a href="sub/collectfocus/collect-focus.html" class="pull-right" >
+                	<div class="col-sm-2">
+                		<img  class="ext-icon" src="img/index_btm_1_normal.png"  />
+                	</div>
+                	<div class="col-sm-10">
+                		<label>收藏与关注</label>
+                        <span class="pull-right">
+                    	 
+                           <img src="img/index_back_icon.png" alt="more" id=""/>
+                        </span>
+                	</div>
+                   
+                </a>
+            </li>
+            <!-- list-view end -->
+            
+            <!-- list-view start -->
+            <li class="list-view">
+                <a href="" class="pull-right" >
+                	<div class="col-sm-2">
+                		<img  class="ext-icon" src="img/index_list_8.png"  />
+                	</div>
+                	<div class="col-sm-10">
+                		<label>问卷调查</label>
+                        <span class="pull-right">
+                    	 
+                           <img src="img/index_back_icon.png" alt="more" id=""/>
+                        </span>
+                	</div>
+                   
+                </a>
+            </li>
+            <!-- list-view end -->
+            
+            <!-- list-view start -->
+            <li class="list-view">
+                <a href="sub/service-message.html" class="pull-right" >
+                	<div class="col-sm-2">
+                		<img  class="ext-icon" src="img/index_list_6.png"  />
+                	</div>
+                	<div class="col-sm-10">
+                		<label>意见反馈</label>
+                        <span class="pull-right">
+                    	 
+                           <img src="img/index_back_icon.png" alt="more" id=""/>
+                        </span>
+                	</div>
+                   
+                </a>
+            </li>
+            <!-- list-view end -->
+          
+        </ul>
+        <!-- list-group end-->
+
+       
+    </form>
+    <!-- form end-->
+     <div class="bottom-bar bottom-bar-tab add-bg" > 
+		   <img src="img/bar_bg.png"  />
+    </div>
+    <!-- bottom-bar start-->
+    <div class="bottom-bar bottom-bar-tab"  >
+			<a class="bottom-tab-item" href="sub/mallactivity/mall-activity.html" id='' data-src="img/index_btm_1_active.png">
+				<p><img src="img/index_btm_1_normal.png" alt="时间" style="width:28px;"/></p>
+				<span class="tab-label">活动</span>
+			</a>
+			<a class="bottom-tab-item" href="sub/pointmall/point-mall.html" data-src="img/index_btm_2_active.png">
+				<p><img src="img/index_btm_2_normal.png" alt="状态" style="width:28px;"/></p>
+				<span class="tab-label">积分商城</span>
+			</a>
+			<a class="bottom-tab-item" href="sub/mymessage/my-message-splendid-recommend.html"  data-src="img/index_btm_4_active.png">
+				<p><img src="img/index_btm_4_normal.png" alt="状态" style="width:28px;"/></p>
+				<span class="tab-label">新闻动态</span>
+			</a>
+			<a class="bottom-tab-item" href="index.html"  data-src="img/index_btm_3_normal.png">
+				<p><img src="img/index_btm_3_active.png" alt="状态" style="width:28px;"/></p>
+				<span class="tab-label text-blue">个人中心</span>
+			</a>
+	</div>
+	<!-- bottom-bar end-->
+	
+	
+
+    <div class="bg-bottom-bar bg-bottom-bar-tab" style="background:url(img/dotted_bg.jpg) repeat-x;">
+    </div>
+</div>
+<div id="mask" class="cl"></div>
+<!-- 使用二维码 -->
+<div id="cardCode" class="cl">
+	
+	<div class="cl" style="margin-bottom: 10px;">
+		<a href="#" class="card-code-img img-active cl"><img src="img/two_code_1.png" /></a>
+	</div>
+	<div class="row text-center">
+		<a href="#" class="card-code-img img-second cl" ><img src="img/two_code_2.png"  /></a>
+	</div>
+  
+</div>
+
+ <script type="text/javascript" src="js/normal-js.js" ></script>
+ <script type="text/javascript" src="js/TileHeadPic.js" ></script>
+
+ <script>
+ 	$(function(){
+ 		$('.apply img').jqthumb({
+		    width: 80,
+		    height: 80,
+		    zoom:2,
+		    after: function(imgObj){
+			   imgObj.css('opacity', 0).animate({opacity: 1},1000);
+		    }
+
+	    });
+	    //alert($("body").outerHeight());
+	    
+	    $('.apply img').on("click",function(e){
+	    	e.preventDefault();
+	    });
+	   
+	    $(".btn-userCode").on("click",function(e){
+			e.preventDefault();
+			$("#cardCode").modal({
+				    maskName:"#mask",
+				    targetObject:"#cardCode",
+				    maskShadow:true,
+				    actionBottom:false,
+				    actionCenter:true
+	        });
+	        $("#cardCode").css({"height":$("#cardCode").outerHeight()+'px'});
+	          
+	        $("#cardCode .cancel").on("click",function(e){
+ 			   e.preventDefault();
+ 			   $("#mask").click();
+ 		    });
+ 		    
+ 		    
+		});
+       
+ 	})
+ </script>
+ 
+</body>
+</html>
